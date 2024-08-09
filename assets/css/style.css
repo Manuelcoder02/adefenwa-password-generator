@@ -1,4 +1,4 @@
-/* GENERAL/ROOT STYLING */
+/* RESET STYLING */
 *,
 ::before,
 ::after {
@@ -8,15 +8,17 @@
 }
 @font-face {
 	font-family: 'JetBrains';
-	src: url(/starter-code/assets/fonts/JetBrainsMono-VariableFont_wght.ttf);
+	src: url(/assets/fonts/JetBrainsMono-VariableFont_wght.ttf);
 }
 @font-face {
 	font-family: 'JetBrains Italic';
-	src: url(/starter-code/assets/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf);
+	src: url(/assets/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf);
 }
+
+/* ROOT STYLING */
 :root {
 	--grey-one:  #24232c;
-	--light-gry: #817d92;
+	--light-grey: #817d92;
 	--very-light-grey: #e6e5ea;
 	--grey-two: #18171f;
 	--green-color: #a4ffaf;
@@ -40,9 +42,54 @@ body {
 	background-color: var(--grey-two);
 }
 
+/* WRAPPER STYLING*/
 #wrapper {
-	border: 1px solid red;
-	margin: 0 auto;
-	width: 250px;
 	
+	margin: 0 auto;
+	width: 300px;
+	margin-top: 2em;
+}
+.head-text {
+	color: var(--green-color);
+	font-size: var(--heading-text);
+	text-align: center;
+	margin-bottom: 0.5em;
+	text-transform: uppercase;
+}
+.sub-text {
+	color: var(--light-grey);
+	font-size: 12px;
+	text-align: center;
+	margin-bottom: 0.5em;
+}
+/* HEADER STYLING */
+header {
+	background-color: var(--grey-one);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding: .5em 1em;
+	border-radius: 10px;
+}
+.pword {
+	background: none;
+	border: none;
+	font-family: 'JetBrains';
+	color: var(--very-light-grey);
+	font-size: var(--body-text);
+	width: 100%;
+}
+.copy {
+	
+	display: flex;
+	justify-content: flex-end;
+}
+
+/* PASSWORD GENERATOR STYLING */
+.password-generator {
+	border-radius: 10px;
+	margin-top: 1em;
+	background-color: var(--grey-one);
+	padding: 0.5em 1em;
 }
