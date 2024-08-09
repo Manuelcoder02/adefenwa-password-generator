@@ -1,29 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Password generator app</title>
-</head>
-<body>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png"
+		/>
 
-  Password Generator
+		<title>Frontend Mentor | Password generator app</title>
+	</head>
+	<body>
+		<main id="wrapper">
+			<h1 class="head-text">Password Generator</h1>
+			<header>
+				<div class="password-display">
+					<h1>P4$5W0rD!</h1>
+				</div>
+				<div class="copy">
+					<img
+						src="./assets/images/icon-copy.svg"
+						alt="two folded books on top of each other"
+						class="copy-icon"
+					/>
+				</div>
+			</header>
+			<section class="password-generator">
+				<div class="character">
+					<div class="row-one">
+						<h1 class="character-length">Character Length</h1>
+						<h1 id="slider--value">10</h1>
+					</div>
 
-  P4$5W0rD!
+					<input
+						type="range"
+						name="character-length"
+						id="slider"
+						min="0"
+						max="20"
+						value="10"
+					/>
+				</div>
+			</section>
+		</main>
 
-  Character Length
-
-  Include Uppercase Letters
-  Include Lowercase Letters
-  Include Numbers
-  Include Symbols
-
-  Strength
-
-  Generate
-
-</body>
+		Character Length Include Uppercase Letters Include Lowercase Letters Include
+		Numbers Include Symbols Strength Generate
+	</body>
 </html>
