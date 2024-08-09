@@ -93,3 +93,20 @@ header {
 	background-color: var(--grey-one);
 	padding: 0.5em 1em;
 }
+
+.row-one {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+.character-length {
+	font-size: 14px;
+	color: var(--very-light-grey);
+}
+#slider--value {
+	color: var(--green-color);
+}
+.slider {
+	width: 100%;
+}
