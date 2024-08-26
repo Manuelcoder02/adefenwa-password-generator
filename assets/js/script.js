@@ -6,6 +6,10 @@ let sliderEL = document.querySelector('#range');
 const btnGenerate = document.querySelector('.btnSubmit');
 const passwordDisplayEL = document.querySelector('.pword')
 
+const upperCaseCheckBox = document.querySelector('#passwordCheckOne')
+const lowerCaseCheckBox = document.querySelector('#passwordCheckTwo')
+const numberCheckBox = document.querySelector('#passwordCheckThree')
+const symbolCheckBox = document.querySelector('#passwordCheckFour')
 
 // 1. Update the slider value
 
@@ -53,12 +57,21 @@ btnGenerate.addEventListener('click', function() {
 	// console.log(sliderValue);
 	generateRandomUpperCaseLetter();
 	generateLowerCaseLetter()
-	console.log(randomUpperCaseLetter);
-	console.log(randomLowerCaseLetter);
+	// console.log(randomUpperCaseLetter);
+	// console.log(randomLowerCaseLetter);
+	
+	upperCaseCheckBox.checked ? console.log(randomUpperCaseLetter) : console.log(randomLowerCaseLetter);
+	;
 	
 	// const showPassword = `${randomUpperCaseLetter}${randomUpperCaseLetter}${randomLowerCaseLetter}`
 	// passwordDisplayEL.value = showPassword;
-	
-	
-	
 })
+
+
+
+
+// upperCaseCheckbox.addEventListener('click', function() {
+// 	this.checked ? console.log('checked') : console.log('not checked');
+// 	;
+	
+// })
