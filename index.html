@@ -14,13 +14,18 @@
 		<link rel="stylesheet" href="./assets/css/style.css" />
 
 		<title>Guard Passs | Password generator app</title>
-		<script type="module" defer src="./assets/js/script.js"></script>
+		<!-- <script type="module" defer src="./assets/js/script.js"></script> -->
+		<script type="module" defer src="./assets/js/app.js"></script>
 	</head>
 	<body>
 		<main id="wrapper">
 			<h1 class="head-text">Guard Pass App</h1>
 			<h4 class="sub-text">Password Generator</h4>
+			<div class="password-alert">
+				<p class="error-message hidden">This is an error</p>
+			</div>
 			<header>
+				
 				<div class="password-display">
 					<input type="text" class="pword" placeholder="P4$5W0rD" />
 				</div>
@@ -37,6 +42,7 @@
 						height="24"
 						viewBox="0 0 21 24"
 						fill="none"
+						class="btnCopy"
 					>
 						<path
 							fill-rule="evenodd"
