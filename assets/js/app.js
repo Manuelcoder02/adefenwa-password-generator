@@ -112,7 +112,7 @@ const barOne = document.querySelector('.bar--one')
 const barTwo = document.querySelector('.bar--two')
 const barThree = document.querySelector('.bar--three')
 const barFour = document.querySelector('.bar--four')
-const strengthText = document.querySelector('.strength-text')
+const strengthValue = document.querySelector('.strength--value')
 
 const updateStrength = function() {
     let strength = 0;
@@ -133,6 +133,8 @@ const updateStrength = function() {
     if(password.length >= 1 && password.length <= 5) {
         barOne.style.backgroundColor = redColor;
         barOne.style.border = 'none';
+        strengthValue.textContent = 'TOO WEAK!'
+        strengthValue.classList.remove('hidden')
     }
 
     // 2) If password is from 6 - 10,
@@ -143,6 +145,9 @@ const updateStrength = function() {
         barOne.style.border = 'none';
         barTwo.style.backgroundColor = orangeColor;
         barTwo.style.border = 'none'
+
+        strengthValue.textContent = 'WEAK'
+        strengthValue.classList.remove('hidden')
     }
 
     // 3) If password is from 11 - 15,
@@ -154,12 +159,30 @@ const updateStrength = function() {
         barTwo.style.border = 'none'
         barThree.style.backgroundColor = goldColor;
         barThree.style.border = 'none'
+
+        strengthValue.textContent = 'MEDIUM'
+        strengthValue.classList.remove('hidden')
     }
     
     // 4) If password is from 16 - 20,
     // all  bar will be displayed and it will be color green 
     
-    // if(password.length > 15 && password.length <= 20) {
+    if(password.length > 15 && password.length <= 20) {
+        barOne.style.backgroundColor = greenColor;
+        barOne.style.border = 'none';
+        barTwo.style.backgroundColor = greenColor;
+        barTwo.style.border = 'none'
+        barThree.style.backgroundColor = greenColor;
+        barThree.style.border = 'none'
+        barFour.style.backgroundColor = greenColor;
+        barFour.style.border = 'none'
+
+        strengthValue.textContent = 'STRONG'
+        strengthValue.classList.remove('hidden')
+    }
+    
+    // Character type
+    // if((hasUppercase && hasLowercase && hasNumbers && hasSymbols) || (password.length > 15 && password.length <= 20) ) {
     //     barOne.style.backgroundColor = greenColor;
     //     barOne.style.border = 'none';
     //     barTwo.style.backgroundColor = greenColor;
@@ -169,18 +192,6 @@ const updateStrength = function() {
     //     barFour.style.backgroundColor = greenColor;
     //     barFour.style.border = 'none'
     // }
-    
-    // Character type
-    if((hasUppercase && hasLowercase && hasNumbers && hasSymbols) || (password.length > 15 && password.length <= 20) ) {
-        barOne.style.backgroundColor = greenColor;
-        barOne.style.border = 'none';
-        barTwo.style.backgroundColor = greenColor;
-        barTwo.style.border = 'none'
-        barThree.style.backgroundColor = greenColor;
-        barThree.style.border = 'none'
-        barFour.style.backgroundColor = greenColor;
-        barFour.style.border = 'none'
-    }
 
     
 }
