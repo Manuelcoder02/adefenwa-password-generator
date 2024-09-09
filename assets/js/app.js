@@ -58,8 +58,11 @@ if (includeSymbols) {
 
 // console.log(characters, length);
 
-if (!characters || length === 0) {
+if (!characters) {
     passwordError.textContent = 'Please select at least one character type.';
+    passwordError.classList.remove('hidden')
+} else if(length === 0) {
+    passwordError.textContent = 'Please select the character length.';
     passwordError.classList.remove('hidden')
 } else{
     passwordError.classList.add('hidden')
